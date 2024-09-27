@@ -11,7 +11,7 @@ You will need to fetch a random fact about cats and display an image of a cat wi
 
 Limitations: You can use Vite, but you will need to start the project in vanilla JavaScript.
 
-# How to Solve It
+## How to Solve It
 
 First, you need to create a project using vite.js, to complete this step, you will need to open a new terminal. Then, write the next command:
 
@@ -19,4 +19,20 @@ First, you need to create a project using vite.js, to complete this step, you wi
 
 npm create@latest
 
+```
+Select the following options:
+- Framework: React
+- Variant: Vanilla Javascript
+
+After the project is generated, navigate into the project folder and run the following commands:
+
+```
+cd projectFolder/
+npm install
+```
+
+These commands will take you into the project folder and install the basic dependencies. Keep in mind that since we created a vanilla project, React isn't yet installed. To continue, you need to install both react and react-dom by running the following command:
+
+```
+npm install react react-dom
 ```
