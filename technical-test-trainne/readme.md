@@ -13,6 +13,7 @@ Limitations: You can use Vite, but you will need to start the project in vanilla
 
 ## How to Solve It
 
+### Initializing a React Project from a Vanilla Javascript Setup
 First, you need to create a project using vite.js, to complete this step, you will need to open a new terminal. Then, write the next command:
 
 ```
@@ -36,3 +37,36 @@ These commands will take you into the project folder and install the basic depen
 ```
 npm install react react-dom
 ```
+
+Next, you need to generate a vite.config.js file. Add the following code to the generated file:
+
+```
+import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+    plugins: [react()]
+});
+```
+
+This code imports the react plugin into the vite configuration file. This plugin enables react support in vite. At this point, we almost finished initializing our React.js project from a vanilla setup.
+
+To finalize, we need to modify the main.js file. Open the main.js file and replace its contents with the following code: 
+
+```
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById('app'));
+
+root.render(<h1>Hello, World!</h1>)
+
+```
+
+At this point we almost completed the setup. To finish, we just need to change the file extension of main.js to main.jsx. Then, you can run the following command in the terminal to start the project:
+
+```
+npm run dev
+```
+
+
+
