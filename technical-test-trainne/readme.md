@@ -68,5 +68,13 @@ At this point we almost completed the setup. To finish, we just need to change t
 npm run dev
 ```
 
+## Develop
+
+First of all, I suggest verifying the API URLs because we need to understand where we are requesting the information from, how we are making the request, and what the endpoint will return. For example, for the image API, the URL will be:
+
+```
+https://cataas.com/cat/says/${firstWord}?size=506&color=red&json=true
+```
+
 
 
