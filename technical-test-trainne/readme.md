@@ -73,8 +73,23 @@ npm run dev
 First of all, I suggest verifying the API URLs because we need to understand where we are requesting the information from, how we are making the request, and what the endpoint will return. For example, for the image API, the URL will be:
 
 ```
-https://cataas.com/cat/says/${firstWord}?size=506&color=red&json=true
+https://cataas.com/cat/says/${firstWord}?size=506&color=red
 ```
+
+To have more organized my project I generated a new folder named "src" where will be storaged my App.jsx component and my App.css. So first, open your App.jsx and let's strat by importing all the libraries that we will be using for this test:
+
+```
+import { useEffect, useState } from "react"
+import './App.css'
+```
+
+Now for this i will create 2 const that will storage the apis url that we get before:
+
+```
+const factEndPoint = `https://catfact.ninja/fact`
+const imageEndPoint = 'https://cataas.com/cat/says/{firstWord}?size=506&color=red'
+```
+
 
 
 
