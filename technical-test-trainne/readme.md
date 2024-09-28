@@ -76,20 +76,49 @@ First of all, I suggest verifying the API URLs because we need to understand whe
 https://cataas.com/cat/says/${firstWord}?size=506&color=red
 ```
 
-To have more organized my project I generated a new folder named "src" where will be storaged my App.jsx component and my App.css. So first, open your App.jsx and let's strat by importing all the libraries that we will be using for this test:
+To keep this project organized, I created a new folder named "src", where I will store my App.jsx component and App.css file. First, open your app.jsx and let's start by importing all the libraries we will be using for this test:
 
 ```
 import { useEffect, useState } from "react"
 import './App.css'
 ```
 
-Now for this i will create 2 const that will storage the apis url that we get before:
+Next, I will create two constants that will store the APIs url we retrieved earlier:
 
 ```
 const factEndPoint = `https://catfact.ninja/fact`
 const imageEndPoint = 'https://cataas.com/cat/says/{firstWord}?size=506&color=red'
 ```
 
+Once this is done, we can now create our app's export function and use it in main.jsx. The app file at this point should look something like this:
+
+```
+import { useEffect, useState } from "react"
+import './App.css'
+
+const factEndPoint = `https://catfact.ninja/fact`
+const imageEndPoint = 'https://cataas.com/cat/says/{firstWord}?size=506&color=red'
+
+export function App(){
+    return(
+        <main>
+            <h1>test for app component</h1>
+        </main>
+    )
+}
+```
+
+Now, in the main.jsx file, we need to import the App.jsx component and update what are we rendering by replacing it with the App component:
+
+```
+*Import of App.jsx*
+
+import {App} from './src/App'
+ 
+*New Render*
+root.render(<App/>)
+
+```
 
 
 
