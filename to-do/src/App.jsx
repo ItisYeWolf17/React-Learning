@@ -1,18 +1,16 @@
 import { useState, useEffect} from 'react'
 
 import './App.css'
-
+import { CardList } from './components/CardList'
 
 
 
 function App() {
 
-
-
   return (
     <>
       <h1>To-Do List</h1>
-      <div className='list-container'>
+      <div className='container'>
         <h3>What's the plan for today?</h3>
 
         <div className='add-task'>
@@ -20,15 +18,12 @@ function App() {
           <button>Add Task</button>
         </div>
 
-        <ul>
-          <li className='list-task'>
-            <p>Walk the dog</p>
-            <div>
-              <button>Delete</button>
-              <button>Edit</button>
-            </div>
-          </li>
-        </ul>
+        <div className='list'>
+          <ul>
+            <CardList task={"Prueba"}></CardList>
+            
+          </ul>
+        </div>
       </div>
 
     </>
